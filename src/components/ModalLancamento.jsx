@@ -30,8 +30,8 @@ export default function ModalLancamento({ lancamento, mesAtual, onGuardar, onFec
   };
 
   return (
-    <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', zIndex: 100 }} onClick={e => { if (e.target === e.currentTarget) onFechar(); }}>
-      <div style={{ background: 'var(--color-background-primary)', borderRadius: 'var(--border-radius-xl) var(--border-radius-xl) 0 0', width: '100%', maxWidth: 520, maxHeight: '90vh', overflow: 'auto', padding: '1.5rem' }}>
+    <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100 }} onClick={e => { if (e.target === e.currentTarget) onFechar(); }}>
+      <div style={{ background: 'var(--color-background-primary)', borderRadius: 'var(--border-radius-xl)', width: '100%', maxWidth: 520, maxHeight: '90vh', overflow: 'auto', padding: '1.5rem', margin: '1rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20 }}>
           <h2 style={{ margin: 0, fontSize: 18, fontWeight: 500 }}>{lancamento ? 'Editar Lançamento' : 'Novo Lançamento'}</h2>
           <button onClick={onFechar} style={{ border: 'none', background: 'transparent', fontSize: 20, cursor: 'pointer', color: 'var(--color-text-secondary)' }}>✕</button>
